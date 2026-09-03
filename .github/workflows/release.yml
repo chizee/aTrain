@@ -283,6 +283,7 @@ jobs:
           signing-policy-slug: ${{ vars.SIGNPATH_POLICY_SLUG }}
           github-artifact-id: ${{ needs.build-windows-msix.outputs.artifact-id }}
           wait-for-completion: true
+          wait-for-completion-timeout-in-seconds: 2400
           output-artifact-directory: artifacts
 
       - name: Generate sha256 checksums
